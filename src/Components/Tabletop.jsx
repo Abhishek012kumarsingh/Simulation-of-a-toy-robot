@@ -1,5 +1,6 @@
 import React from 'react';
 import Robot from './Robot';
+import './style.css';
 
 const Tabletop = ({
   robotPosition,
@@ -9,24 +10,12 @@ const Tabletop = ({
   reportRobot,
 }) => {
   return (
-    <div style={{ textAlign: 'center', marginTop: '20px' }}>
-      <div
-        style={{
-          position: 'relative',
-          width: '250px',
-          height: '250px',
-          margin: 'auto',
-        }}
-      >
+    <div className="tableWrapper">
+      <div className="tableGrid">
         {/* Render the tabletop grid (5x5) - you can add grid styling as needed */}
-        <div
-          style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 50px)' }}
-        >
+        <div className="tabletopGrid">
           {Array.from({ length: 25 }).map((_, index) => (
-            <div
-              key={index}
-              style={{ border: '1px solid black', height: '50px' }}
-            ></div>
+            <div key={index} className="gridBlock"></div>
           ))}
         </div>
 
@@ -35,7 +24,7 @@ const Tabletop = ({
       </div>
 
       {/* Add UI controls  */}
-      <div style={{ marginTop: '20px' }}>
+      <div className="marginTop20">
         {/* Instead of button you can have input as well but that will create rerender on each input value unless you put debounce on top of it to prevent that you can mannualy edit it as well if it*/}
         <button onClick={() => placeRobot(0, 0, 'NORTH')}>
           PLACE 0,0,NORTH

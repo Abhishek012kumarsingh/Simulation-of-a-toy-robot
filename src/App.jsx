@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Tabletop from './Components/Tabletop';
+import './style.css';
 
 const App = () => {
   const [robotPosition, setRobotPosition] = useState(null);
@@ -86,9 +87,9 @@ const App = () => {
       />
 
       {/* Display the report and error messages */}
-      <div style={{ textAlign: 'center', marginTop: '20px' }}>
+      <div className="errorBlock">
         {report && <p>Report: {report}</p>}
-        {error && <p style={{ color: 'red' }}>{error}</p>}
+        {error && <p className="redColor">{error}</p>}
       </div>
     </div>
   );
