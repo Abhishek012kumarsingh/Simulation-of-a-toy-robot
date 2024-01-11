@@ -1,3 +1,4 @@
-# Simulation-of-a-toy-robot
-
-[Edit in StackBlitz next generation editor ⚡️](https://stackblitz.com/~/github.com/Abhishek012kumarsingh/Simulation-of-a-toy-robot)
+# Do 
+React version should be >17
+To setup do npm install
+npm start
